@@ -13,7 +13,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping(value = "/users")
-public class serResources {
+public class UserResources {
 
     @Autowired
     private UserService service;

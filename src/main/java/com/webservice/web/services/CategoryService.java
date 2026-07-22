@@ -1,6 +1,7 @@
 package com.webservice.web.services;
 
 import com.webservice.web.entities.Category;
+import com.webservice.web.entities.Order;
 import com.webservice.web.repositories.CategoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
