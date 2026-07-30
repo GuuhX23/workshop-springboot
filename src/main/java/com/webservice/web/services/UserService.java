@@ -2,6 +2,7 @@ package com.webservice.web.services;
 
 import com.webservice.web.entities.User;
 import com.webservice.web.repositories.UserRepository;
+import com.webservice.web.services.execptions.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
@@ -21,7 +22,7 @@ public class UserService {
 
     public User findById(Long id) {
         Optional<User> obj = repository.findById(id);
-        return obj.get();
+        return obj.orElseThrow(() -> new ResourceNotFoundException(id));
     }
 
     public User insert(User obj) {
